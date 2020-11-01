@@ -17,18 +17,18 @@ public class Task123Test {
     @Test
     public void locateElements() {
         WebDriverFactory.getDriver().get("https://ecse00100f2f.epam.com:9002/yacceleratorstorefront/?site=electronics");
-        WebElement logo = WebDriverFactory.getDriver().findElement(By.xpath("/html//nav[1]//img"));
-        WebElement singInRegister = WebDriverFactory.getDriver().findElement(By.xpath("/html//nav[1]//div[2]/div//a"));
+        WebElement logo = WebDriverFactory.getDriver().findElement(By.xpath("//div[@class ='nav__left js-site-logo']"));
+        WebElement singInRegister = WebDriverFactory.getDriver().findElement(By.xpath("//header//li[@class='liOffcanvas']"));
         WebElement searchButton = WebDriverFactory.getDriver().findElement(By.cssSelector("button.js_search_button"));
         WebElement searchField = WebDriverFactory.getDriver().findElement(By.id("js-site-search-input"));
         WebElement navigationMenu = WebDriverFactory.getDriver().findElement(By.cssSelector("ul.js-offcanvas-links"));
-        WebElement banner = WebDriverFactory.getDriver().findElement(By.xpath("/html//main/div[3]/div[1]"));
+        WebElement banner = WebDriverFactory.getDriver().findElement(By.xpath("//div[@class='main__inner-wrapper']/div[1]"));
         searchField.sendKeys("camileo");
         searchButton.click();
         WebDriverFactory.getDriver().findElement(By.id("addToCartForm1776948")).click();
         WebDriverFactory.getDriver().manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-        WebDriverFactory.getDriver().findElement(By.xpath("//*[@id=\"cboxClose\"]")).click();
-        WebDriverFactory.getDriver().findElement(By.xpath("/html//li[2]//img")).click();
+        WebDriverFactory.getDriver().findElement(By.xpath("//button[@id='cboxClose']")).click();
+        WebDriverFactory.getDriver().findElement(By.xpath("//a[@title='<em class=\"search-results-highlight\">Camileo</em> S10 EU']")).click();
     }
 
 
