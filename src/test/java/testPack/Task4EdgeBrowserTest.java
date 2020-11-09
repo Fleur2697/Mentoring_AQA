@@ -1,13 +1,16 @@
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+package testPack;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class Task4EdgeBrowserTest {
-    private WebDriver driver;
 
-    @Before
+public class Task4EdgeBrowserTest {
+    private WebDriver  driver;
+
+    @BeforeEach
     public void setUp() {
         System.setProperty("webdriver.edge.driver", "C:\\Users\\Olha_Koloskova\\msedgedriver.exe");
         driver = new EdgeDriver();
@@ -18,7 +21,7 @@ public class Task4EdgeBrowserTest {
         driver.get("https://www.google.com");
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
         driver.quit();
     }
