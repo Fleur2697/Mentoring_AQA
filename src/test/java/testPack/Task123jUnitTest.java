@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 public class Task123jUnitTest {
     private static WebDriver driver = WebDriverFactory.getDriver();
     private static By logo = By.xpath("//div[@class ='nav__left js-site-logo']");
@@ -84,7 +83,6 @@ public class Task123jUnitTest {
         showPageTitleAndPageURL();
     }
 
-
     @Test
     @DisplayName("Work with elements")
     public void workWithMultipleElements() {
@@ -97,6 +95,7 @@ public class Task123jUnitTest {
             System.out.println(i.getText());
         }
     }
+
 
     @Test
     @DisplayName("Total and Subtotal check")

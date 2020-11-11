@@ -10,16 +10,16 @@ public class WebDriverFactory {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            driver = getDriverWithPAram();
+            driver = getDriverCapabilities();
             driver.manage().window().maximize();
         }
         return driver;
     }
 
-    public static WebDriver getDriverWithPAram() {
+    public static WebDriver getDriverCapabilities() {
         ChromeOptions option = new ChromeOptions();
         option.addArguments("--ignore-certificate-errors");
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Olha_Koloskova\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         return new ChromeDriver(option);
     }
 }
