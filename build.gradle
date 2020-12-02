@@ -16,6 +16,13 @@ dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     testCompile("org.junit.jupiter:junit-jupiter-engine:5.5.2")
     testCompile("org.junit.platform:junit-platform-runner:1.5.2")
+    testImplementation 'io.cucumber:cucumber-java:6.8.1'
+    testImplementation 'io.cucumber:cucumber-junit:6.8.1'
+    testImplementation group: 'io.cucumber', name: 'cucumber-core', version: '6.8.1'
+
+}
+repositories {
+    mavenCentral()
 }
 test {
     useJUnitPlatform()

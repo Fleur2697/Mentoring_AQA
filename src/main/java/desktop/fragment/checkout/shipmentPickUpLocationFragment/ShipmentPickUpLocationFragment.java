@@ -4,8 +4,8 @@ import abstractClasses.fragment.AbstractFragment;
 import org.openqa.selenium.By;
 
 public class ShipmentPickUpLocationFragment extends AbstractFragment {
-    public static By subtotalOnCheckout = By.xpath("//div[@class='subtotal']");
-    public static By totalOnCheckout = By.xpath("//div[@class='totals']");
+    public static By subtotalOnCheckout = By.xpath("//div[@class='subtotal']/span");
+    public static By totalOnCheckout = By.xpath("//div[@class='totals']/span");
     public static By taxOnCheckout = By.xpath("//div[@class='realTotals']");
 
     public String getTextSubtotalOnCheckout(){
